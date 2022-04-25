@@ -5,3 +5,9 @@ h1{
 .cafe{
     height: 500px;
 }
+
+p{
+    width: 200px;
+    height:120px;
+    color:orange;
+}
