@@ -5,7 +5,56 @@ h1{
 .cafe{
     height: 500px;
 }
+body{
+    font-family:"Avennir Next";
+}
 
-p{
-    color:green;
+li{
+    list-style:none;
+}
+
+.header{
+    background-color:#3FBF5F;
+    color:#fff;
+    height:90px;
+}
+.header-logo{
+    float:left;
+    font-size:36px;
+    padding:20px 40px;
+}
+
+.header-list{
+    float:left;
+}
+.header-list li{
+    float:left;
+    padding:33px 20px;
+}
+
+.main{
+    padding:100px 80px;
+}
+.copy-container h1{
+    font-size:50px;
+}
+.copy-container p{
+    font-size:25px;
+}
+
+.footer{
+    background-color:#3359CC;
+    color:#fff;
+    height:150px;
+    padding:50px;
+}
+.footer-logo{
+    font-size:32px;
+    float:left;
+}
+.footer-list{
+    float:right;
+}
+.footer-list li{
+    padding-bottom:15px;
 }
