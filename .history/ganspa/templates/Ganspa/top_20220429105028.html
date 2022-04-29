@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Ganspa</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/top.css' %}"/>
+</head>
+<body class="container">
+    <img src="{% static 'Ganspa/img/cafe.png' %}" class="cafe"/>
+    <h1>Ganspa</h1>
+    <p>hiromu morisaki</p> 
+    <a href="https://us05web.zoom.us/j/81931427678?pwd=TjRSb2hHNko0Nk1ycExnZlpwWnd2Zz09">Ganspaへ参加します</a>
+   <p>zoomURL</p> 
+   <h1 class="display-4 text-primary">{{title}}</h1>
+   <p class="h5 mt-4">{{message|safe}}</p>
+   <table class ="table">
+       <tr>
+           <th>ID</th>
+           <th>NAME</th>
+           <th>GENDER</th>
+           <th>MAIL</th>
+           <th>AGE</th>
+           <th>BIRTHDAY</th>
+        </tr>
+    {% for item in data %}
+        <tr>
+            <td>{{idem.id}}</td>
+            <td>{{idem.name}}</td>
+            <td>{% if item.gender == False %}male{% endif %}
+                {% if item.gender == True %}female{% endif %}</td>
+            <td>{{idem.mail}}</td>
+            <td>{{idem.age}}</td>
+            <td>{{idem.birthday}}</td>
+        <tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
