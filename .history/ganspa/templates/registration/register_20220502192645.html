@@ -1,0 +1,23 @@
+{% extends "Ganspa/base.html" %}
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Ganspa</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/top.css' %}"/>
+</head>
+{% block content %}
+<h2>アカウントを作成</h2>
+<form method="post">
+{% csrf_token %}
+<p>ユーザー名</p>
+{{form.username}}
+<p>パスワード</p>
+{{form.password1}}
+<p>パスワード(確認用)</p>
+{{form.password2}}
+<p></p>
+<button id="submit-btn" type="submit">新規登録</button>
+<p>既にアカウントをお持ちですか？<a href="{% url 'login' %}">ログイン</a></p>
+{% endblock %}

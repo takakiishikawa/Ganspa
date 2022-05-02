@@ -1,0 +1,22 @@
+{% extends "Ganspa/base.html" %}
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Ganspa</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/top.css' %}"/>
+</head>
+<body>
+    
+{% block content %}
+
+<h2>ログイン</h2>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">ログイン</button>
+</form>
+{% endblock %}
+</body> 
+
