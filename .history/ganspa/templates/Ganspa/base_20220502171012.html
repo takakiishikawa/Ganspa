@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Ganspa</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/base.css' %}"/>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="{% url 'guide' %}">guideページへ</a>
+            <a href="{% url 'users' %}">usersページへ</a>
+            <a href="{% url 'user' %}">userページへ</a>
+        </div>
+        <div>
+            {% if user.is_authenticated %}
+            <p>おはようございます☕️　 {{ user.username }}　さん    <a href="{% url 'logout'%}">ログアウト</a></p>
+            {% else %}
+            {% endif %}
+        </div>
+    </header>
+{% block content %}{% endblock %}
+</body>
+</html>
+
