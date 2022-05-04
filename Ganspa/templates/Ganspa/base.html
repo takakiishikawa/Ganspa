@@ -5,13 +5,21 @@
     <meta charset="utf-8">
     <title>Ganspa</title>
     <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/base.css' %}"/>
+    {% block css %}{% endblock %}
 </head>
 <body>
 <div class="header">
-    <a href="{% url 'guide' %}">guideページへ</a>
-    <a href="{% url 'users' %}">usersページへ</a>
-    <a href="{% url 'user' %}">userページへ</a>
+    <div class="header-list">
+        <a href="{% url 'guide' %}">guideページへ</a>
+        <a href="{% url 'users' %}">usersページへ</a>
+        <a href="{% url 'user' %}">userページへ</a>
+    </div>
+    <div class="header-logo">
+    <img src="{% static 'Ganspa/img/logo.png' %}" class="logo01" alt="Ganspa">
+    </div>
+    
 </div>
+
 {% block content %}{% endblock %}
 </body>
 </html>
