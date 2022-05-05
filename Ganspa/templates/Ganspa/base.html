@@ -6,7 +6,6 @@
     <title>Ganspa</title>
     <link rel="stylesheet" type="text/css" href="{% static 'Ganspa/css/base.css' %}"/>
     {% block css %}{% endblock %}
-
 </head>
 <body>
     <header>
@@ -24,6 +23,9 @@
             <p>{{ account.coffee_like }}</p>
             {% else %}
             {% endif %}
+        </div>
+        <div class="header-logo">
+          <img src="{% static 'Ganspa/img/logo.png' %}" class="logo01" alt="Ganspa">
         </div>
     </header>
 {% block content %}{% endblock %}

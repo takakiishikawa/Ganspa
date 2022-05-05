@@ -1,6 +1,6 @@
 h1{
     margin:20px;
-    color:red;
+    color:#0e0500;
 }
 .cafe{
     height: 500px;
@@ -13,27 +13,9 @@ li{
     list-style:none;
 }
 
-.header{
-    background-color:#3FBF5F;
-    color:#fff;
-    height:90px;
-}
-.header-logo{
-    float:left;
-    font-size:36px;
-    padding:20px 40px;
-}
-
-.header-list{
-    float:left;
-}
-.header-list li{
-    float:left;
-    padding:33px 20px;
-}
-
 .main{
     padding:100px 80px;
+    background-color:#9bbc1d;
 }
 .copy-container h1{
     font-size:50px;
@@ -43,18 +25,22 @@ li{
 }
 
 .footer{
-    background-color:#3359CC;
+    background-color:#699220;
     color:#fff;
-    height:150px;
-    padding:50px;
+    height:120px;
+    padding:40px;
 }
 .footer-logo{
-    font-size:32px;
     float:left;
+    display: block;
+    width: auto;
+    height:auto;
 }
 .footer-list{
     float:right;
 }
-.footer-list li{
-    padding-bottom:15px;
+.footer-list a{
+    font-size:25px;
+    
+    padding-bottom:20px;
 }
