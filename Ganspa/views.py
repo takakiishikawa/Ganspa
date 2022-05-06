@@ -4,8 +4,6 @@ from django.urls import reverse
 
 from django.views.generic import TemplateView
 from .forms import AccountForm,AddAccountForm
-from .forms import UserChangeForm,AddUserChangeForm
-
 
 from django.contrib.auth.decorators import login_required
 
@@ -78,26 +76,6 @@ class AccountRegistration(TemplateView):
 
 
  
-def edit(request, id):
-    data = User.objects.get(id=id)
-    params = {
-        'data': data,
-    }
-    return render(request, 'registration/edit.html', params)
- 
-def edit_complete(request, id):
-    data = User.objects.get(id=id)
-    if(request.method == 'POST'):
-        user_data = UserChangeForm(request.POST, instance=data)
-        if(user_data.is_valid()):
-            user_data.save()
-            return render(request, 'registration/edit_complete.html')
-        else:
-            params = {
-                'data': request.POST,
-            }
-            return render(request, 'registration/edit.html', params)
-    return render(request, 'registration/edit_complete.html')
 
 
 
